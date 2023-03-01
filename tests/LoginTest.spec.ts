@@ -39,7 +39,7 @@ test('login test with wrong credentials', async ({ page }) => {
   await loginPage.enterPassword('secret_sauce');
   await loginPage.clickOnLoginbtn();
   await page.waitForTimeout(5000);
-  await page.screenshot({path:'./Screenshots/screenshot_'+Date.now()+'.png'});
+  await page.screenshot({path:`${process.env.screenshotPath}/screenshot_${Date.now()}.png`});
 })
 
 
